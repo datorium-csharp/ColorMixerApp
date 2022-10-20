@@ -20,6 +20,10 @@ namespace ColorMixerApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        byte redColorValue;
+        byte greenColorValue;
+        byte blueColorValue;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,8 +33,10 @@ namespace ColorMixerApp
         {
             try
             {
-                byte redColorValue = Convert.ToByte(RedValue.Text);
+                redColorValue = Convert.ToByte(RedValue.Text);
                 RedRectangle.Fill = new SolidColorBrush(Color.FromRgb(redColorValue, 0, 0));
+                MixedRectangle.Background = new SolidColorBrush(Color.FromRgb(redColorValue, greenColorValue, blueColorValue));
+
             }
             catch
             {
@@ -43,8 +49,9 @@ namespace ColorMixerApp
         {
             try
             {
-                byte greenColorValue = Convert.ToByte(GreenValue.Text);
+                greenColorValue = Convert.ToByte(GreenValue.Text);
                 GreenRectangle.Fill = new SolidColorBrush(Color.FromRgb(0, greenColorValue, 0));
+                MixedRectangle.Background = new SolidColorBrush(Color.FromRgb(redColorValue, greenColorValue, blueColorValue));
             }
             catch
             {
@@ -56,8 +63,9 @@ namespace ColorMixerApp
         {
             try
             {
-                byte blueColorValue = Convert.ToByte(BlueValue.Text);
+                blueColorValue = Convert.ToByte(BlueValue.Text);
                 BlueRectangle.Fill = new SolidColorBrush(Color.FromRgb(0, 0, blueColorValue));
+                MixedRectangle.Background = new SolidColorBrush(Color.FromRgb(redColorValue, greenColorValue, blueColorValue));
             }
             catch
             {
