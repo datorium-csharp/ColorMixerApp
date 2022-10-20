@@ -72,5 +72,10 @@ namespace ColorMixerApp
                 BlueValue.Text = "0";
             }
         }
+
+        private void RedSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            RedValue.Text = RedSlider.Value.ToString();
+        }
     }
 }

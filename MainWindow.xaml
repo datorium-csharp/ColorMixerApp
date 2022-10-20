@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:ColorMixerApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="MixedRectangle">
+    <Grid x:Name="MixedRectangle" Margin="0,0,0,22">
         <Rectangle x:Name="RedRectangle" HorizontalAlignment="Left" Height="200" Margin="52,82,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
         <Rectangle x:Name="GreenRectangle" HorizontalAlignment="Center" Height="200" Margin="0,82,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
         <Rectangle x:Name="BlueRectangle" HorizontalAlignment="Left" Height="200" Margin="549,82,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
         <TextBox x:Name="RedValue" HorizontalAlignment="Left" Margin="52,27,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="200" FontSize="28" TextChanged="RedValue_TextChanged"/>
         <TextBox x:Name="GreenValue" HorizontalAlignment="Center" Margin="0,27,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="200" FontSize="28" TextChanged="GreenValue_TextChanged"/>
         <TextBox x:Name="BlueValue" HorizontalAlignment="Left" Margin="549,27,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="200" FontSize="28" TextChanged="BlueValue_TextChanged"/>
+        <Slider x:Name="RedSlider" HorizontalAlignment="Left" Margin="52,308,0,0" VerticalAlignment="Top" Width="200" Maximum="255" SmallChange="1" Foreground="#FFA74B4B" Background="Red" BorderBrush="Transparent" ValueChanged="RedSlider_ValueChanged" LargeChange="0"/>
+        <Slider x:Name="GreenSlider" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top" Width="200" Maximum="255" SmallChange="1" Foreground="#FFA74B4B" Background="#FF4DFF00" BorderBrush="Transparent"/>
+        <Slider x:Name="BlueSlider" HorizontalAlignment="Left" Margin="549,308,0,0" VerticalAlignment="Top" Width="200" Maximum="255" SmallChange="1" Foreground="#FFA74B4B" Background="#FF003DFF" BorderBrush="Transparent"/>
 
     </Grid>
 </Window>
